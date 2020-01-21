@@ -1,0 +1,78 @@
+@import '../../stylesheet/mixins.scss';
+@import '../../stylesheet/variables.scss';
+
+.home {
+    min-height: 100vh;
+    &__banner {
+        height: 350px;
+        background: $blue;
+        position: relative;
+        .avatar {
+            position: absolute;
+            @include flex();
+            justify-content: flex-end;
+            width: 100%;
+            top: 68px;
+            right: 0;
+            z-index: 1;
+        }
+        .item1, .item2 {
+           position: absolute;  
+        }
+        .item1 {
+           left: 0;
+        }
+        .item3 {
+            right: 0;
+        }
+        .item2 {
+            left: 33.33%;
+        }
+        .mac_panel {
+            position: absolute;
+            width: 200px;
+            background-image: url(../../assets/images/mac_book.png);
+            height: 160px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            left: 42.5%;
+            bottom: 30px;
+            video {
+                position: absolute;
+                top: 8px;
+            }
+        }
+    }
+    &__stand {
+        position: relative;
+        width: 100%;
+        @include flex();
+        justify-content: center;
+        height: 95px;
+        background: white;
+        
+        .midBox {
+            position: absolute;
+            top: -45px;
+            width: 500px;
+            height: 130px;
+            background: white;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            z-index: 2;
+            margin-top: 10px;
+            @include flex(column);
+            justify-content: center;
+            align-items: center;
+            .divider {
+                width: 150px;
+                height: 2px;
+                background: -webkit-gradient(linear, left top, right bottom, from(#009F40), to(#febc4b));
+                background: linear-gradient(to bottom right, #009F40, #febc4b);
+                margin-top: 10px;
+            }
+        }
+
+    }
+}

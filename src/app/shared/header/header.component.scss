@@ -1,4 +1,14 @@
+@import '../../../stylesheet/variables.scss';
+@import '../../../stylesheet/mixins.scss';
+
 .header {
     height: 60px;   
     background: white;
+    box-shadow: 0px 0px 2px $grey_v1;
+    @include flex();
+    @include fsize(1.25);
+    @include font('M');
+    color: $blue;
+    align-items: center;
+    padding-left: 20px;
 }
