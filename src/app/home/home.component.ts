@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  
+  constructor() {}
+
+  videoElement;
+
+  @ViewChild('heroVideo', {static: false})
+  heroVideo: ElementRef;
+
+  ngAfterViewInit() {
+    setTimeout(time => {
+        this.videoElement = document.getElementById('heroVideo');
+        this.videoElement.muted = true;
+        this.videoElement.play();
+    },500);
+   }
+
 }
