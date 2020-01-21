@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import './stylesheet/variables.scss';
+@import './stylesheet/mixins.scss';
+
+body {
+    background: $lightbg;
+    @include zeroGap();
+    @include font('Q');
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
