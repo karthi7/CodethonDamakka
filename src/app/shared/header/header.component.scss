@@ -11,4 +11,7 @@
     color: $blue;
     align-items: center;
     padding-left: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
