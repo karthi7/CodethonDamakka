@@ -8,9 +8,18 @@ body {
     @include font('Q');
 }
 html, body { height: 100%; }
-body { margin: 0; }
-h1,h2,h3,h4,h5,h6 {
+body { 
+    margin: 0; 
+}
+h1,h2,h3,h4,h5,h6,p {
     @include zeroGap();
 }
-
+h2{
+    @include fsize(1.5);
+    @include font('R');
+}
+h3{
+    @include fsize(1.2);
+    @include font('R');
+}
 
