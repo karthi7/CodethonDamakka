@@ -8,15 +8,38 @@
             <img class="item3" src="../../assets/images/coding_people2.svg"/>
         </div>
         <div class="mac_panel">
-            <video loop muted autoplay #heroVideo width="186">
-                <source src="../../assets/videos/coding_video1.mp4" type="video/mp4">
+            <video loop muted autoplay id='heroVideo' width="186">
+                <source src="../../assets/videos/coding_video4.mp4" type="video/mp4">
             </video>
         </div>
     </div>
     <div class="home__stand">
         <div class="midBox">
-            <h2>Code When Bored ! !</h2>
+            <h3>Code When Bored ! !</h3>
             <div class="divider"></div>
+        </div>
+    </div>
+    <div class="home__streams_sec">
+        <div class="home__streams_sec-favorites">
+            <div class="home__streams_sec-h-container">
+                <h2 class="home__streams_sec-header">Favorite Streams</h2>
+                <img src="../../assets/images/add-24px.svg" class="add_icon">
+            </div>
+            <div class="home__streams_sec-tiles">
+                <app-favorite-stream-tile></app-favorite-stream-tile>
+                <app-favorite-stream-tile></app-favorite-stream-tile>
+                <app-favorite-stream-tile></app-favorite-stream-tile>
+            </div>
+        </div>
+        <div class="home__streams_sec-favorites">
+            <div class="home__streams_sec-h-container">
+                <h2 class="home__streams_sec-header">Other Streams</h2>
+            </div>
+            <div class="home__streams_others-sec-tiles">
+                <app-stream-tile></app-stream-tile>
+                <app-stream-tile></app-stream-tile>
+                <app-stream-tile></app-stream-tile>
+            </div>
         </div>
     </div>
 </div>

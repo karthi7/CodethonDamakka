@@ -1,0 +1,13 @@
+@import '../../../stylesheet/mixins';
+@import '../../../stylesheet/variables';
+
+.stream__tile{
+    @include card();
+    width: 170px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #31908c;
+    margin: 20px;
+}
