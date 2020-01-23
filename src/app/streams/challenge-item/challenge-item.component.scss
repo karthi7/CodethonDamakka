@@ -1,0 +1,71 @@
+@import '../../../stylesheet/variables.scss';
+@import '../../../stylesheet/mixins.scss';
+
+.challenge {
+    h2,h3,p {
+        @include zeroGap();
+    }
+    @include card();
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    @include flex();
+    box-sizing: border-box;
+    padding-left:20px;
+    position: relative;
+    &__hightlight_mark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #657789;
+        width: 75px;
+        height: 2.5px;
+        border-bottom-right-radius: 100px;
+        background: linear-gradient(to bottom right, #330aad, #0aa873);
+    }
+    &__leftsection {
+        @include flex(column);
+        justify-content: center;
+        flex: 4;
+        .title {
+            h2 {
+                @include fsize(1.1);
+                font-weight: 600;
+                color: #5f5f5F;
+            }
+        }
+        .description {
+            p {
+                @include fsize(1);
+                padding-top: 10px;
+            }
+        }
+    }
+    &__rightsection {
+        background: #afafaf38;
+        @include flex(column);
+        flex: 1;
+        .date {
+            align-self: flex-end;
+            p {
+                @include fsize(0.95);
+                padding:5px 5px 0 0;
+            }
+        }
+        .points {
+            @include flex(column);
+            justify-content: center;
+            align-items: center;
+            h3 {
+                @include fsize(2.25);
+                color: green;
+                font-weight: 500;
+            }
+            h4 {
+                @include fsize(1);
+                color: grey;
+            }
+        }
+        
+    }
+}

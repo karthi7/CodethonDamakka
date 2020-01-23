@@ -6,6 +6,7 @@ body {
     background: $lightbg;
     @include zeroGap();
     @include font('Q');
+    box-sizing: border-box;
 }
 html, body { height: 100%; }
 body { 

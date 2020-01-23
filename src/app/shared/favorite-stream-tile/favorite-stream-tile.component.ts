@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-favorite-stream-tile',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteStreamTileComponent implements OnInit {
 
+  @Input() stream;
+  @Output() onClick = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onTileClick() {
+    this.onClick.emit();
   }
 
 }

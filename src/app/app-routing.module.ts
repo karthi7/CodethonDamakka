@@ -10,6 +10,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: RouteConfig.STREAMS,
+    loadChildren: () => import('./streams/streams.module').then(m => m.StreamsModule)
+  },
+  {
     path: '',
     redirectTo: '/' + RouteConfig.HOME,
     pathMatch: 'full'

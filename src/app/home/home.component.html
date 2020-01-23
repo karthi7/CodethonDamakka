@@ -1,6 +1,6 @@
 <div class="home">
     <div class="home__banner">
-        <div class="overlay"></div>
+        <div class="overlay1"></div>
         <div class="avatar">
             <img class="item1" src="../../assets/images/coding_people1.svg"/>
             <div class="item2">
@@ -12,6 +12,10 @@
                 <source src="../../assets/videos/coding_video4.mp4" type="video/mp4">
             </video>
         </div>
+        <div class="animation-area">
+            <ul class="box-area"><li *ngFor="let item of [1,2,3,4,5,6,7]"></li></ul>
+        </div>
+        <div class="overlay2"></div>
     </div>
     <div class="home__stand">
         <div class="midBox">
@@ -26,9 +30,7 @@
                 <img src="../../assets/images/add-24px.svg" class="add_icon">
             </div>
             <div class="home__streams_sec-tiles">
-                <app-favorite-stream-tile></app-favorite-stream-tile>
-                <app-favorite-stream-tile></app-favorite-stream-tile>
-                <app-favorite-stream-tile></app-favorite-stream-tile>
+                <app-favorite-stream-tile @items *ngFor="let stream of streamData" [stream]="stream" (onClick)="onFavStreamClick(stream)"></app-favorite-stream-tile>
             </div>
         </div>
         <div class="home__streams_sec-favorites">

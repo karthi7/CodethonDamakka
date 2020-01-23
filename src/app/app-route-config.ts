@@ -1,3 +1,6 @@
 export const RouteConfig = {
-    HOME: 'home'
+    HOME: 'home',
+    STREAMS: 'stream',
+    STREAM_ID: ':streamId',
+    LIST: 'list'
 }

@@ -13,12 +13,21 @@
         background-image: url(../../assets/images/coding_people8.jpg);
         background-position: center;
         background-size: cover;
-        .overlay {
-            width: 100%;
+        .overlay1 {
+            width: 50%;
             height: 350px;
             position: absolute;
             top: 0;
-            background: linear-gradient(to bottom right, #ff9494ad, #febc4b94);
+            left: 0;
+            background: linear-gradient(to bottom right, #0aa87370, #330aad70);
+        }
+        .overlay2 {
+            width: 50%;
+            height: 350px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(to bottom right, #03337370, #ff949470);
         }
         .avatar {
             position: absolute;
@@ -51,11 +60,89 @@
             align-items: flex-end;
             margin-bottom: 25px;
             position: relative;
+            z-index: 2;
             video {
                 position: absolute;
                 top: 8px;
             }
         }
+        .animation-area {
+            background: linear-gradient(to left, #8942a8, #ba382f);
+        }
+        .box-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            @include zeroGap();
+        }
+        .box-area li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 25px;
+            height: 25px;
+            animation: animate 20s linear infinite;
+            bottom: -150px;
+            // background: #D3D5D7;
+            background-size: cover;
+            
+        }
+        .box-area li:nth-child(1) {
+            left: 10%;
+            width: 38px;
+            height: 38px;
+            animation-delay: 1.5s;
+            animation-duration: 10s;
+            background-image: url(../../assets/images/badge_flying_icon1.png);
+        }
+        .box-area li:nth-child(2) {
+            left: 23%;
+            width: 33px;
+            height: 33px;
+            animation-delay: 1.5s;
+            animation-duration: 10s;
+            background-image: url(../../assets/images/badge_flying_icon2.png);
+        }      
+        .box-area li:nth-child(3) {
+            left: 35%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 5.5s;
+            background-image: url(../../assets/images/badge_flying_icon3.png);
+        }     
+        .box-area li:nth-child(4) {
+            left: 40%;
+            width: 45px;
+            height: 45px;
+            animation-delay: 0s;
+            animation-duration: 15s;
+            background-image: url(../../assets/images/badge_flying_icon4.png);
+        }           
+        .box-area li:nth-child(5) {
+            left: 58%;
+            width: 48px;
+            height: 48px;
+            animation-delay: 0s;
+            background-image: url(../../assets/images/badge_flying_icon5.png);
+        } 
+        .box-area li:nth-child(6) {
+            left: 67%;
+            width: 38px;
+            height: 38px;
+            animation-delay: 3.5s;
+            background-image: url(../../assets/images/badge_flying_icon6.png);
+        }                          
+        .box-area li:nth-child(7) {
+            left: 88%;
+            width: 42px;
+            height: 42px;
+            animation-delay: 0s;
+            background-image: url(../../assets/images/badge_flying_icon7.png);
+        } 
+                              
     }
     &__stand {
         position: relative;
@@ -118,4 +205,15 @@
         }
     }
 
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
 }

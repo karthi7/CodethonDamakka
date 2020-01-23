@@ -1,0 +1,66 @@
+@import '../../../stylesheet/mixins.scss';
+
+.stream-panel {
+    margin: auto;
+    max-width: 70%;
+    width: 100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+    &__description {
+        position: relative;
+        min-height: 150px;
+        padding: 20px 45px;
+        @include flex();
+        width: 100%;
+        align-items: center;
+        box-sizing: border-box;
+        @include card();
+        .highlight_mark {
+            position: absolute;
+            width: 3px;
+            height: 90%;
+            top: 5%;
+            left: 0;
+            background: linear-gradient(to bottom right, #0aa873, #330aad);
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+        img {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            border: 3px solid silver;
+            object-fit: cover;
+        }
+        img:hover {
+            transform: scale(1.01);
+            transition: 0.25s;
+        }
+        .detail {
+            padding-left: 20px;
+            h2,p {
+                @include zeroGap();
+            }
+            h2 {
+                @include fsize(1.7);
+                font-weight: 300;
+                letter-spacing: 2px;
+                line-height: 35px;
+                padding-top: 5px;
+            }
+            p {
+                padding-top: 10px;
+                @include fsize(1.05);
+                color: grey;
+                line-height: 25px;
+                letter-spacing: 1px
+
+            }
+        }
+    }
+    &__feeds {
+        &__item {
+            margin-top: 20px;
+        }
+    }
+}
