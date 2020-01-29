@@ -10,8 +10,24 @@
     @include font('M');
     color: $blue;
     align-items: center;
-    padding-left: 20px;
+    justify-content: space-between;
+    padding: 0px 0px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 5;
+    .logo {
+        padding-left: 20px;
+        @include flex();
+        align-items: center;
+        span {
+            color: teal;
+            @include fsize(1.4);
+            padding-top: 2.5px;
+        }
+    }
+    img {
+        padding-right: 20px;
+        cursor: pointer;
+    }
+    
 }

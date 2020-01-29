@@ -4,13 +4,18 @@
 .lengthy__tile{
     @include card();
     width: 100%;
-    height: 150px;
-    padding-top: 1rem;
+    min-height: 150px;
+    @include font('M');
     .divider{
         width: 20px;
         height: 3px;
         background-color: green;
     }
+    cursor: pointer;
+}
+.lengthy__tile :hover {
+    transition:0.2s;
+    background: #F2F2F2;
 }
 .lengthy__tile-body{
     padding-right: 1rem;
@@ -21,15 +26,32 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    @include font('M');
+    h3 {
+        font-weight: 400;
+        color: #424242;
+    }
     .lengthy__tile-header{
         margin-bottom: .5rem;
+        font-size: 18px;
     }
     .lengthy__tile-info{
-        margin: 8px;
+        margin: 4px;
         margin-left: 0;
-        font-size: 13px;
-        @include font('J');
+        font-size: 15px;
+        @include font('M');
+        span {
+            @include fsize(1.5);
+            padding-right: 5px;
+        }
     }
+}
+.lengthy__tile-logo {
+    background: url(../../../assets/images/coding_mac4.jpg);
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+    height: 150px;
 }
 .lengthy__tile-logo img{
     width: 125px;

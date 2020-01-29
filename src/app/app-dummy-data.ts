@@ -8,6 +8,7 @@ export const StreamData: StreamModel[] = [
         activeChallengeSinceLastVisit : '3',
         completedChallenges : '3',
         description: 'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. ',
+        avatar: '../../../assets/images/coding_mac8.jpg',
         challenges: [
             {
                 title: 'Reverse a String',
@@ -54,6 +55,7 @@ export const StreamData: StreamModel[] = [
         activeChallengeSinceLastVisit : '3',
         completedChallenges : '3',
         description: 'Venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. ',
+        avatar: '../../../assets/images/stream_image_logo4.jpg',
         challenges: [
             {
                 title: 'Politics',
@@ -100,6 +102,7 @@ export const StreamData: StreamModel[] = [
         activeChallengeSinceLastVisit : '3',
         completedChallenges : '3',
         description: 'Justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. ',
+        avatar: '../../../assets/images/stream_image_logo3.jpg',
         challenges: [
             {
                 title: 'Cooking',

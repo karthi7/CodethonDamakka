@@ -1,14 +1,12 @@
 <div class="lengthy__tile" (click)="onTileClick()">
-    <div class="divider"></div>
+    <div class="lengthy__tile-logo" [style.background]="'url( '+ stream.avatar + ')'">
+    </div>
     <div class="lengthy__tile-body">
         <div class="lengthy__tile-info-sec">
             <h3 class="lengthy__tile-header">{{stream.title}}</h3>
-            <p class="lengthy__tile-info">{{stream.activeChallenge}} Active challenges</p>
-            <p class="lengthy__tile-info">{{stream.activeChallengeSinceLastVisit}} Challenges since last visit</p>
+            <p class="lengthy__tile-info"><span>{{stream.activeChallenge}}</span> Active challenges</p>
+            <p class="lengthy__tile-info"><span>{{stream.activeChallengeSinceLastVisit}}</span> Challenges since last visit</p>
             <p class="lengthy__tile-info"><span class="green">{{stream.completedChallenges}}</span> Completed</p>
-        </div>
-        <div class="lengthy__tile-logo">
-            <img src="../../../assets/images/stream_image_logo1.jpg">
         </div>
     </div>
 </div>

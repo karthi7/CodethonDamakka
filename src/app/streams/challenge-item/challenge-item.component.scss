@@ -27,6 +27,7 @@
         @include flex(column);
         justify-content: center;
         flex: 4;
+        padding: 20px 0px;
         .title {
             h2 {
                 @include fsize(1.1);
@@ -68,4 +69,8 @@
         }
         
     }
+}
+
+@media screen and (min-width: 440px){
+ 
 }

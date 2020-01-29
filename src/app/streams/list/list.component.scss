@@ -2,7 +2,7 @@
 
 .stream-panel {
     margin: auto;
-    max-width: 70%;
+    max-width: 95%;
     width: 100%;
     margin-top: 30px;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
         position: relative;
         min-height: 150px;
         padding: 20px 45px;
-        @include flex();
+        @include flex(column);
         width: 100%;
         align-items: center;
         box-sizing: border-box;
@@ -61,6 +61,16 @@
     &__feeds {
         &__item {
             margin-top: 20px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 440px){
+    .stream-panel {
+        max-width: 65%;
+        &__description {
+            @include flex(row);
         }
     }
 }

@@ -1,0 +1,318 @@
+@import '../../stylesheet/mixins.scss';
+@import '../../stylesheet/variables.scss';
+
+.home {
+    min-height: calc(100vh - 60px);
+    
+    &__banner {
+        height: 500px;
+        background: $blue;
+        position: relative;
+        @include flex();
+        align-items: flex-end;
+        justify-content: center;
+        background-image: url(../../assets/images/coding_people8.jpg);
+        background-position: center;
+        background-size: cover;
+        .heading {
+            @include flex(column);
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: #45454546;
+            width: 100%;
+            height: 100%;
+            h1 {
+                margin: 0px;
+                padding: 0px;
+                font-weight: 200;
+                @include font('M');
+                @include fsize(2);
+                @media screen and (min-width: 440px){
+                    @include fsize(2.75);
+                }    
+                letter-spacing: 0.2px;
+                color: white;
+                z-index: 2;
+            }
+            .divider {
+                width: 183px;
+                height: 2px;
+                background: -webkit-gradient(linear, left top, right bottom, from(#009F40), to(#febc4b));
+                background: linear-gradient(to bottom right, #23aa55, #636363);
+                margin-top: 30px;
+                z-index: 2;
+            }
+        }
+        .info-grids {
+            position: absolute;
+            height: 190px;
+            border-radius: 5px;
+            width: 97%;
+            bottom: -90px;
+            @include flex();
+            max-width: 1000px;
+            background: #FFFFFFEE;
+            z-index: 2;
+            justify-content: space-evenly;
+            align-items: center;
+            @media screen and (min-width: 440px){
+                width: 70%;
+            }
+            &__item {
+                position: relative;
+                cursor: pointer;
+                div .underbar {
+                    width: 0;
+                    height: 1px;
+                    background: rgba(100,100,200,0);
+                    bottom: -12px;
+                    position: absolute;
+                    -webkit-transition: 0.5s ease;
+                }
+                :hover ~ div > .underbar{
+                    cursor: pointer;
+                    width: 110%;
+                    left: -10px;
+                    height: 1px;
+                    background: steelblue;
+                    box-shadow: 0 0 2px teal;
+                  }
+            }
+        }
+        .overlay {
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom right, #0aa87370, #330aad70);
+        }
+        .overlay1 {
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(to bottom right, #03337370, #ff949470);
+        }
+        .avatar {
+            position: absolute;
+            @include flex();
+            justify-content: flex-end;
+            width: 100%;
+            top: 68px;
+            right: 0;
+            z-index: 1;
+        }
+        .item1, .item2 {
+           position: absolute;  
+        }
+        .item1 {
+           left: 0;
+        }
+        .item3 {
+            right: 0;
+        }
+        .item2 {
+            left: 33.33%;
+        }
+        .mac_panel {
+            width: 200px;
+            background-image: url(../../assets/images/mac_book.png);
+            height: 160px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+            video {
+                position: absolute;
+                top: 8px;
+            }
+        }
+        .animation-area {
+            background: linear-gradient(to left, #8942a8, #ba382f);
+        }
+        .box-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            @include zeroGap();
+        }
+        .box-area li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 25px;
+            height: 25px;
+            animation: animate 20s linear infinite;
+            bottom: -150px;
+            background: #D3D5D750;
+            background-size: cover;
+            
+        }
+        .box-area li:nth-child(1) {
+            left: 10%;
+            width: 38px;
+            height: 38px;
+            animation-delay: 1.5s;
+            animation-duration: 10s;
+            // background-image: url(../../assets/images/badge_flying_icon1.png);
+        }
+        .box-area li:nth-child(2) {
+            left: 23%;
+            width: 33px;
+            height: 33px;
+            animation-delay: 1.5s;
+            animation-duration: 10s;
+            // background-image: url(../../assets/images/badge_flying_icon2.png);
+        }      
+        .box-area li:nth-child(3) {
+            left: 35%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 5.5s;
+            // background-image: url(../../assets/images/badge_flying_icon3.png);
+        }     
+        .box-area li:nth-child(4) {
+            left: 40%;
+            width: 45px;
+            height: 45px;
+            animation-delay: 0s;
+            animation-duration: 15s;
+            // background-image: url(../../assets/images/badge_flying_icon4.png);
+        }           
+        .box-area li:nth-child(5) {
+            left: 58%;
+            width: 48px;
+            height: 48px;
+            animation-delay: 0s;
+            // background-image: url(../../assets/images/badge_flying_icon5.png);
+        } 
+        .box-area li:nth-child(6) {
+            left: 67%;
+            width: 38px;
+            height: 38px;
+            animation-delay: 3.5s;
+            // background-image: url(../../assets/images/badge_flying_icon6.png);
+        }                          
+        .box-area li:nth-child(7) {
+            left: 88%;
+            width: 42px;
+            height: 42px;
+            animation-delay: 0s;
+            // background-image: url(../../assets/images/badge_flying_icon7.png);
+        } 
+                              
+    }
+    &__stand {
+        position: relative;
+        width: 100%;
+        @include flex();
+        justify-content: center;
+        height: 95px;
+        background: white;
+        
+        .midBox {
+            position: absolute;
+            top: -45px;
+            width: 500px;
+            height: 130px;
+            background: white;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            z-index: 2;
+            margin-top: 10px;
+            @include flex(column);
+            justify-content: center;
+            align-items: center;
+            .divider {
+                width: 183px;
+                height: 2px;
+                background: -webkit-gradient(linear, left top, right bottom, from(#009F40), to(#febc4b));
+                background:#424242;
+                margin-top: 10px;
+            }
+        }
+
+    }
+    &__streams_sec{
+        width: 100%;
+        margin: auto;
+        padding-top: 7.5rem;
+        margin-bottom: 20px;
+        @media screen and (min-width: 440px){
+            width: 70%;
+        }
+        .home__streams_sec-favorites {
+            @include card();
+            margin-top: 30px;
+        }
+        .home__streams_sec-h-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #EEEEEE;
+            text-align: center;
+            padding: 10px 20px;
+            h2 {
+                @include zeroGap();
+                @include fsize(1);
+                font-weight: 400;
+                @include font('M');
+            }
+        }
+        .home__streams_sec-header{
+            padding-bottom: .8rem;
+        }
+        .add_icon{
+            cursor: pointer;
+        }
+        .home__streams_sec-tiles,.home__streams_others-sec-tiles{
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-evenly;
+            max-width: 100%;
+            flex-wrap: wrap;
+            app-favorite-stream-tile {
+                flex-basis: 93%;
+                margin-top: 10px;
+                @media screen and (min-width: 440px){
+                    flex-basis: calc(33% - 40px);
+                    margin-top: 0px;
+                }
+            }
+        }
+        .home__streams_others-sec-tiles{
+            padding: 0 15px 25px 15px;
+            justify-content: space-evenly;
+            app-stream-tile {
+                flex-basis: 98%;
+                @media screen and (min-width: 440px){
+                    flex-basis: calc(33% - 25px);
+                    margin-top: 0px;
+                }
+            }
+
+        }
+    }
+
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+

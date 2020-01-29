@@ -1,0 +1,10 @@
+@import '../../../stylesheet/variables.scss';
+@import '../../../stylesheet/mixins.scss';
+
+.footer {
+    background: white;
+    height: 100px;
+    @include flex();
+    align-items: center;
+    justify-content: center;
+}

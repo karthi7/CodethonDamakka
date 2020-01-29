@@ -6,6 +6,7 @@ export interface StreamModel {
     completedChallenges: string;
     description: string;
     challenges: Array<ChallengeModel>;
+    avatar:string;
 }
 
 export interface ChallengeModel {
