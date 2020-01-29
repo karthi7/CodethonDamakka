@@ -14,4 +14,11 @@ export interface ChallengeModel {
     description: string;
     points: string;
     endDate: string;
+    id:string;
+}
+
+export interface Contributors {
+    name:string;
+    avatar:string;
+    points: string;
 }

@@ -8,7 +8,7 @@
     box-sizing: border-box;
     &__description {
         position: relative;
-        min-height: 150px;
+        min-height: 200px;
         padding: 20px 45px;
         @include flex(column);
         width: 100%;
@@ -27,9 +27,9 @@
         }
         img {
             border-radius: 50%;
-            width: 140px;
-            height: 140px;
-            border: 3px solid silver;
+            width: 175px;
+            height: 175px;
+            border: 2px solid silver;
             object-fit: cover;
         }
         img:hover {
@@ -58,9 +58,76 @@
             }
         }
     }
-    &__feeds {
-        &__item {
-            margin-top: 20px;
+    
+    &__content {
+        @include flex();
+        justify-content: space-between;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        .feeds {
+            margin-bottom: 20px;
+            flex-basis: calc(80% - 20px);
+            @media screen and (min-width: 440px){
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            &__item:first-child {
+                margin-top: 20px;
+            }
+    
+            &__item {
+                margin-top: 15px;
+            }
+        }
+        .leaderboard {
+            @include card();
+            flex-basis: calc(20% - 20px);
+            h3 {
+                @include zeroGap();
+                font-weight: 400;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .divider {
+                width: 70%;
+                height: 1px;
+                margin: auto;
+                background: linear-gradient(to bottom right, #23aa55, #636363);
+                margin-top: 5px;
+            }
+            ul {
+                list-style: none;
+                @include zeroGap();
+                margin-top: 20px;
+            }
+            ul li > div.contributor {
+                @include flex();
+                justify-content: space-evenly;
+                align-items: center;
+                border-bottom: 1px solid #EEEEEE;
+                padding: 10px 0;
+                .avatar {
+                    flex-basis:calc(30% - 20px);
+                    @include flex();
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        background: #424242;
+                        border-radius: 50%;
+                    }
+                }
+                .desc {
+                    @include flex(column);
+                    justify-content: center;
+                    align-items: center;
+                    flex-basis:calc(70% - 30px);
+                    p {
+                        @include fsize(1.65);
+                    }
+                }
+            }
         }
     }
 }
@@ -68,7 +135,7 @@
 
 @media screen and (min-width: 440px){
     .stream-panel {
-        max-width: 65%;
+        max-width: 80%;
         &__description {
             @include flex(row);
         }

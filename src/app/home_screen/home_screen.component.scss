@@ -52,7 +52,7 @@
             bottom: -90px;
             @include flex();
             max-width: 1000px;
-            background: #FFFFFFEE;
+            background: #FFFFFF;
             z-index: 2;
             justify-content: space-evenly;
             align-items: center;
@@ -62,17 +62,32 @@
             &__item {
                 position: relative;
                 cursor: pointer;
+                @include flex(column);
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                div {
+                    @include flex(column);
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        width: 80%;
+                        text-align: center;
+                        padding-top: 5px;
+                    }
+                }
                 div .underbar {
                     width: 0;
                     height: 1px;
                     background: rgba(100,100,200,0);
-                    bottom: -12px;
+                    bottom: -15px;
+                    left: 10px;
                     position: absolute;
                     -webkit-transition: 0.5s ease;
                 }
                 :hover ~ div > .underbar{
                     cursor: pointer;
-                    width: 110%;
+                    width: 90%;
                     left: -10px;
                     height: 1px;
                     background: steelblue;

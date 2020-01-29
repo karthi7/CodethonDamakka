@@ -4,10 +4,12 @@ import { ListComponent } from './list/list.component';
 import { StreamsRoutingModule } from './streams-routing.module';
 import { ChallengeItemComponent } from './challenge-item/challenge-item.component';
 import { CommonModule } from '@angular/common';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     ListComponent,
+    DetailComponent,
     ChallengeItemComponent
   ],
   imports: [

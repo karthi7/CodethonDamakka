@@ -1,5 +1,5 @@
 <div class="challenge">
-    <div class="challenge__hightlight_mark"></div>
+    <div *ngIf="1===2" class="challenge__hightlight_mark"></div>
     <div class="challenge__leftsection">
         <div class="title">
             <h2>{{item.title}}</h2>
@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="challenge__rightsection">
-        <div class="date">
+        <div class="date" *ngIf="1===2">
             <p>{{item.endDate}}</p> 
         </div>
         <div class="points">

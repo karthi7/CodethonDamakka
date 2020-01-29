@@ -2,16 +2,38 @@
     <div class="stream-panel__description">
         <div class="highlight_mark"></div>
         <div class="avatar">
-            <img src="../../../assets/images/stream_image_logo1.jpg"/>
+            <img src="{{currentStream.avatar}}"/>
         </div>
         <div class="detail">
             <h2>{{currentStream.title}}</h2>
             <p>{{currentStream.description}}</p>
         </div>
     </div>
-    <div class="stream-panel__feeds">
-        <div class="stream-panel__feeds__item" @items *ngFor="let challenge of currentStream.challenges">
-            <app-challenge-item [item]="challenge"></app-challenge-item>
-        </div>    
+    <div class="stream-panel__content">
+        <div class="feeds">
+            <div class="stream-panel__feeds__item" (click)="launchChallenge(challenge)" @items *ngFor="let challenge of currentStream.challenges">
+                <app-challenge-item [item]="challenge"></app-challenge-item>
+            </div>    
+        </div>
+        <div class="leaderboard">
+            <div>
+                <h3>Top Contributors</h3>
+                <div class="divider"></div>
+                <ul>
+                    <li *ngFor="let person of contributors">
+                        <div class="contributor">
+                            <div class="avatar">
+                                <img src="{{person.avatar}}"/>
+                            </div>
+                            <div class="desc">
+                                <h3>{{person.name}}</h3>
+                                <p>{{person.points}}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
+    
 </div>

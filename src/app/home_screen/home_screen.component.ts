@@ -20,16 +20,16 @@ export class HomeScreenComponent {
   gridInfo = [
     {
       avatarUrl: '../../assets/images/icons/ic1.svg',
-      title: 'Maintenance',
-      desc: 'why maintenance ?'
+      title: 'Challenges',
+      desc: 'Business problem & Coding challenges'
     },{
       avatarUrl: '../../assets/images/icons/ic2.svg',
-      title: 'Efficiency',
-      desc: 'why efficiency ?'
+      title: 'Innovations(ICG)',
+      desc: 'Would you like to bid for an innovation'
     },{
       avatarUrl: '../../assets/images/icons/ic3.svg',
-      title: 'Collabaration',
-      desc: 'why collabaration ?'
+      title: 'Discussion Forums',
+      desc: 'Are you facing any issues ?'
     }
   ]
 
