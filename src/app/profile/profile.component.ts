@@ -31,4 +31,8 @@ export class ProfileComponent {
     this.activeTab = this.tabDetails[index].id;
   }
 
+  onTileClick(id, challenge) {
+    this.router.navigate([challenge.streamId,challenge.challengeId,RouteConfig.DETAIL]);
+  }
+
 }
