@@ -5,7 +5,7 @@
     &__description {
         height: 80px;
         background: white;
-        padding: 0 10%;
+        padding: 0 15%;
         .challenge {
             @include flex();
             justify-content: space-between;
@@ -33,7 +33,7 @@
         width:95%;
         margin-top: 70px;
         @media screen and (min-width: 440px){
-            width:80%;
+            width:70%;
         }
         .tab_panel {
             ul {

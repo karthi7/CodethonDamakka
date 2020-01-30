@@ -30,6 +30,8 @@
                 @include fsize(2);
                 @media screen and (min-width: 440px){
                     @include fsize(2.75);
+                    width: 25%;
+                    text-align: center;
                 }    
                 letter-spacing: 0.2px;
                 color: white;

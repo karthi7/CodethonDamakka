@@ -14,7 +14,7 @@
     padding: 0px 0px;
     position: fixed;
     width: 100%;
-    padding: 0 10%;
+    padding: 0 15%;
     box-sizing: border-box;
     z-index: 5;
     .logo {
@@ -25,12 +25,27 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            cursor: pointer;
         }
         span {
             color: teal;
             @include fsize(1.85);
             letter-spacing: 4px;
             padding-left: 10px;
+        }
+    }
+    .links {
+        @include flex();
+        align-items: center;
+        a {
+            padding-right:50px;
+            color: teal;
+            @include fsize(1);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover {
+            color: #2196F3;
         }
     }
     img {
