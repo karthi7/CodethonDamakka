@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StreamsModule } from './streams/streams.module';
 import { HomeScreenComponent } from './home_screen/home_screen.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

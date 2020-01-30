@@ -1,0 +1,13 @@
+<div class="lengthy__tile" (click)="onTileClick()">
+    <div class="lengthy__tile-logo" [style.background]="'url( '+ challenge.streamAvatar + ')'">
+    </div>
+    <div class="lengthy__tile-body">
+        <div class="lengthy__tile-info-sec">
+            <h3 class="lengthy__tile-header">{{challenge.streamTitle}}</h3>
+            <div class="lengthy__tile-info">
+                <p>{{challenge.challengeTitle}}</p>
+                <p class="points">{{challenge.points}}</p>
+            </div>    
+        </div>
+    </div>
+</div>

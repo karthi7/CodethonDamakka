@@ -75,3 +75,22 @@
 @media screen and (min-width: 440px){
  
 }
+
+.highlight {
+    position: absolute;
+    left: 0;
+    width: 1.5px;
+    height: 98%;
+    background: green;
+}
+
+
+::ng-deep .dark_mode .challenge {
+    background: $theme_dark_secondary !important;
+    color: #DDDDDD !important;
+    &__leftsection {
+        .title h2 {
+            color: #CCCCCC !important;
+        }
+    }
+}

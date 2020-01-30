@@ -1,0 +1,42 @@
+<div class="profile">
+   <div class="profile__user_info">
+       <div class="pi">
+           <img width="125" height="125" src="../../assets/images/icons/contributor5.png"/>
+           <h3>Saravana (SK)</h3>
+       </div>
+       <div class="award_details">
+           <div class="award_details__badge">
+               <img src="../../assets/images/badge/badge3.png"/>
+           </div>
+           <div class="separator"></div>
+           <div class="award_details__points">
+               <h3>200</h3>
+               <p>Points</p>
+           </div>
+           <div class="separator"></div>
+           <div class="award_details__b_points">
+                <h3>20</h3>
+                <p>Behavioural points</p>
+           </div>
+       </div>
+   </div>
+   <div class="profile__details">
+        <div class="tab_panel">
+            <ul>
+                <ng-container @items *ngFor="let item of tabDetails;let itr = index;">
+                    <li (click)="onTabSelect(itr)" [ngClass]="{'highlight':item.isSelected}">
+                        {{item.title}}
+                    </li>
+                    <div *ngIf="itr < tabDetails.length-1" class="div"></div>
+                </ng-container>
+            </ul>
+        </div>
+        <div class="detail_panel">
+            <ng-container @items *ngFor="let id of tabIds">
+                <div *ngIf="activeTab === id" class="grid">
+                    <app-profile-stream-challenge @items *ngFor="let challenge of details[id]" [challenge]="challenge" (onClick)="onTileClick(id, challenge)"></app-profile-stream-challenge>
+                </div>    
+            </ng-container>
+        </div>
+   </div>
+</div>

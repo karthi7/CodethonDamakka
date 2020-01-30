@@ -74,21 +74,25 @@
                         width: 80%;
                         text-align: center;
                         padding-top: 5px;
+                        color: gray;
+                    }
+                    h3 {
+                        color: teal;
+                        font-weight: bold;
                     }
                 }
                 div .underbar {
                     width: 0;
                     height: 1px;
                     background: rgba(100,100,200,0);
-                    bottom: -15px;
-                    left: 10px;
+                    bottom: -5px;
                     position: absolute;
                     -webkit-transition: 0.5s ease;
                 }
                 :hover ~ div > .underbar{
                     cursor: pointer;
-                    width: 90%;
-                    left: -10px;
+                    width: 88%;
+                    left: 20px;
                     height: 1px;
                     background: steelblue;
                     box-shadow: 0 0 2px teal;
@@ -278,7 +282,7 @@
             padding: 10px 20px;
             h2 {
                 @include zeroGap();
-                @include fsize(1);
+                @include fsize(1.15);
                 font-weight: 400;
                 @include font('M');
             }
@@ -331,3 +335,16 @@
     }
 }
 
+
+::ng-deep .dark_mode .info-grids {
+    background: $theme_dark_primary !important;
+    color: white;
+}
+
+::ng-deep .dark_mode .home__streams_sec-h-container {
+    border-bottom: 1px solid $theme_dark_fifth !important;
+}
+
+::ng-deep .dark_mode .home__streams_sec  .home__streams_sec-favorites {
+    background: $theme_dark_tertiary !important;
+}

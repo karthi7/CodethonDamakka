@@ -22,6 +22,7 @@ export class ListComponent implements OnInit {
     this.streamId = this.route.snapshot.params['streamId'];
     this.currentStream = this.getCurrentStream(this.streamId);
     this.contributors = ContributorList;
+    this.scrollToTop();
   }
 
   getCurrentStream(streamId): StreamModel {
@@ -32,6 +33,10 @@ export class ListComponent implements OnInit {
 
   launchChallenge(challenge) {
     this.router.navigate(['../', challenge.id , RouteConfig.DETAIL], {relativeTo: this.route});
+  }
+
+  scrollToTop() {
+    window.scroll(0,0);
   }
 
 }

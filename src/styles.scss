@@ -24,3 +24,23 @@ h3{
     @include font('R');
 }
 
+ body.dark_mode {
+    background: $theme_dark_tertiary;
+    color: lightcyan;
+}
+
+.dark_mode .mat-menu-content {
+    background: $theme_dark_tertiary !important;
+    color: lightcyan !important;
+}
+.dark_mode .mat-menu-item {
+    color: lightcyan !important;
+}
+
+.dark_mode .mat-menu-item .mat-icon-no-color {
+    color: lightcyan !important;
+}
+
+.dark_mode .mat-menu-panel {
+    border-radius: 0px !important;
+}

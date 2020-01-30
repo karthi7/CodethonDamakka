@@ -4,5 +4,6 @@ export const RouteConfig = {
     STREAM_ID: ':streamId',
     LIST: 'list',
     CHALLENGE_ID: ':challengeId',
-    DETAIL: 'detail'
+    DETAIL: 'detail',
+    PROFILE: 'profile'
 }

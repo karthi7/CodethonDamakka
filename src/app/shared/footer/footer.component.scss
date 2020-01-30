@@ -8,3 +8,8 @@
     align-items: center;
     justify-content: center;
 }
+
+::ng-deep .dark_mode .footer {
+    background: $theme_dark_primary !important;
+    color: white !important;
+}

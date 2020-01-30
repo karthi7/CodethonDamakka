@@ -11,7 +11,7 @@
     </div>
     <div class="stream-panel__content">
         <div class="feeds">
-            <div class="stream-panel__feeds__item" (click)="launchChallenge(challenge)" @items *ngFor="let challenge of currentStream.challenges">
+            <div class="feeds__item" (click)="launchChallenge(challenge)" @items *ngFor="let challenge of currentStream.challenges">
                 <app-challenge-item [item]="challenge"></app-challenge-item>
             </div>    
         </div>

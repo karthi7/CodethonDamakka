@@ -14,20 +14,33 @@
     padding: 0px 0px;
     position: fixed;
     width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
     z-index: 5;
     .logo {
-        padding-left: 20px;
         @include flex();
         align-items: center;
+        a {
+            @include flex();
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
         span {
             color: teal;
-            @include fsize(1.4);
-            padding-top: 2.5px;
+            @include fsize(1.85);
+            letter-spacing: 4px;
+            padding-left: 10px;
         }
     }
     img {
-        padding-right: 20px;
         cursor: pointer;
     }
     
+}
+
+::ng-deep .dark_mode .header {
+    background: $theme_dark_primary;
+    color: white;
+    box-shadow: 0px 0px 2px #131313;
 }

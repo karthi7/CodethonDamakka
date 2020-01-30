@@ -1,9 +1,24 @@
 <header>
     <div class="header">
         <div class="logo">
-            <img width="40" height="40" src="../../../assets/images/icons/logo_v1.svg"/>
-            <span>CoLab</span>
+            <a href="./">
+                <img width="50" height="50" src="../../../assets/images/icons/logo_v1.svg"/>
+                <span>CoLab</span>
+            </a>
         </div>
-        <img width="35" height="35" src="../../../assets/images/icons/user.svg"/>
+        <div>
+            <img width="33" mat-icon-button [matMenuTriggerFor]="menu" height="33" src="../../../assets/images/icons/user.svg"/>
+            <mat-menu #menu="matMenu">
+
+            <button mat-menu-item (click)="goToProfile();">
+                <mat-icon>face</mat-icon>
+                <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>color_lens</mat-icon>
+                <span>{{curretTheme}}<mat-slide-toggle style="padding-left:10px" (toggleChange)="onThemeSelection($event)"></mat-slide-toggle></span>
+            </button>
+            </mat-menu>
+        </div>
     </div>
 </header>

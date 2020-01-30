@@ -29,7 +29,7 @@
             border-radius: 50%;
             width: 175px;
             height: 175px;
-            border: 2px solid silver;
+            border: 4px solid #efefef;
             object-fit: cover;
         }
         img:hover {
@@ -62,7 +62,7 @@
     &__content {
         @include flex();
         justify-content: space-between;
-        margin-top: 40px;
+        margin-top: 30px;
         margin-bottom: 20px;
         .feeds {
             margin-bottom: 20px;
@@ -71,22 +71,20 @@
                 width: 90%;
                 margin-bottom: 20px;
             }
-            &__item:first-child {
-                margin-top: 20px;
-            }
-    
-            &__item {
+            
+            &__item{
                 margin-top: 15px;
             }
         }
         .leaderboard {
             @include card();
+            margin-top: 15px;
             flex-basis: calc(20% - 20px);
             h3 {
                 @include zeroGap();
                 font-weight: 400;
                 text-align: center;
-                padding-top: 10px;
+                padding-top: 12.5px;
             }
             .divider {
                 width: 70%;
@@ -100,6 +98,9 @@
                 @include zeroGap();
                 margin-top: 20px;
             }
+            ul li:first-child > div.contributor img {
+                border: 1.45px solid goldenrod;
+            }
             ul li > div.contributor {
                 @include flex();
                 justify-content: space-evenly;
@@ -107,14 +108,14 @@
                 border-bottom: 1px solid #EEEEEE;
                 padding: 10px 0;
                 .avatar {
-                    flex-basis:calc(30% - 20px);
+                    flex-basis:calc(30% - 75px);
                     @include flex();
                     justify-content: center;
                     align-items: center;
                     img {
                         width: 60px;
                         height: 60px;
-                        background: #424242;
+                        background: #ededed;
                         border-radius: 50%;
                     }
                 }
@@ -139,5 +140,24 @@
         &__description {
             @include flex(row);
         }
+    }
+}
+
+::ng-deep .dark_mode .stream-panel__description {
+    background: $theme_dark_secondary !important;
+    color: white;
+    img {
+        border-color: #424242 !important;
+    }
+}
+
+::ng-deep .dark_mode .leaderboard {
+    background: $theme_dark_secondary !important;
+    color: #EEEEEE;
+    .contributor {
+        border-bottom-color: #353535 !important;
+    }
+    .contributor .avatar img {
+        background: #333333 !important;
     }
 }

@@ -16,43 +16,74 @@ export const StreamData: StreamModel[] = [
                 description: 'Write a code to reverse string. Free to use any programming languages.',
                 points: '10',
                 endDate: '12/12/2020',
-                id:'camel_case'
+                id:'camel_case',
+                status: 'not completed'
             },
             {
                 title: 'Palindrome Code',
                 description: 'Write a code to implement palindrome. Any programming language is accepted.',
                 points: '15',
                 endDate: '13/12/2020',
-                id:'palindrome'
+                id:'palindrome',
+                status: 'completed'
             },
             {
                 title: 'Shortcut to reach the destination',
                 description: 'Code snippet to get the shortest steps to reach the destination in any programming languages.',
                 points: '25',
                 endDate: '15/12/2020',
-                id:'shortcut'
+                id:'shortcut',
+                status: 'completed'
             },
             {
                 title: 'Coin Change Problem',
                 description: 'Give the changes to the amount with least number of coin. Surplus amount of coins will be supplied',
                 points: '20',
                 endDate: '15/12/2020',
-                id:'coinchange'
+                id:'coinchange',
+                status: 'not completed'
             },
             {
                 title: 'Fibonacci series',
                 description: 'Write a shortest program to implement fibonacci series. Free to use any programming languages',
                 points: '30',
                 endDate: '19/12/2020',
-                id:'fibonacci'
+                id:'fibonacci',
+                status: 'not completed'
             },
             {
                 title: 'Factorial Numbers',
                 description: 'Write a shortest program to implement factorial series. Free to use any programming languages',
                 points: '35',
                 endDate: '22/12/2020',
-                id:'factorial'
+                id:'factorial',
+                status: 'not completed'
+            },
+            {
+                title: 'Odd Numbers',
+                description: 'Write a shortest program to implement odd number series. Free to use any programming languages',
+                points: '25',
+                endDate: '22/12/2020',
+                id:'odd_numbers',
+                status: 'not completed'
+            },
+            {
+                title: 'Prime Numbers',
+                description: 'Write a shortest program to implement prime number series. Free to use any programming languages',
+                points: '15',
+                endDate: '22/12/2020',
+                id:'prime_numbers',
+                status: 'completed'
+            },
+            {
+                title: 'Whole Numbers',
+                description: 'Write a shortest program to implement whole number series. Free to use any programming languages',
+                points: '20',
+                endDate: '22/12/2020',
+                id:'whole_numbers',
+                status: 'not completed'
             }
+
         ]
     },
     {
@@ -69,42 +100,48 @@ export const StreamData: StreamModel[] = [
                 description: 'Prepare your content to deliver speech in politics and day to day events happening in the country',
                 points: '10',
                 endDate: '12/12/2020',
-                id:'politics'
+                id:'politics',
+                status: 'not completed'
             },
             {
                 title: 'Cricket',
                 description: 'Give your speech on cricket. Free to choose any topic and any country with respect to cricket',
                 points: '15',
                 endDate: '13/12/2020',
-                id:'cricket'
+                id:'cricket',
+                status: 'completed'
             },
             {
                 title: 'Photography',
                 description: 'Give your speech on photography. Free to choose any topic and any country with respect to cricket',
                 points: '25',
                 endDate: '15/12/2020',
-                id:'photography'
+                id:'photography',
+                status: 'not completed'
             },
             {
                 title: 'Traffic in Bangalore',
                 description: 'Views on the traffic in bangalore and suggest how effectively we can get rid from this',
                 points: '20',
                 endDate: '15/12/2020',
-                id:'traffic'
+                id:'traffic',
+                status: 'not completed'
             },
             {
                 title: 'World war 3',
                 description: 'Your view on the world war 3 possibilities and summarize who is the main reason for this.',
                 points: '30',
                 endDate: '19/12/2020',
-                id:'worldwar3'
+                id:'worldwar3',
+                status: 'completed'
             },
             {
                 title: 'Cine industry',
                 description: 'Any lattest news about the kollywoodm tollywood or any other cine industry',
                 points: '35',
                 endDate: '22/12/2020',
-                id:'cine'
+                id:'cine',
+                status: 'not completed'
             }
         ]
     },
@@ -122,42 +159,48 @@ export const StreamData: StreamModel[] = [
                 description: 'Prepare a dish and supply it in your floor. Ask your collegues to try the same.',
                 points: '10',
                 endDate: '12/12/2020',
-                id:'cooking'
+                id:'cooking',
+                status: 'not completed'
             },
             {
                 title: 'Cricket',
                 description: 'Give your speech on cricket. Free to choose any topic and any country with respect to cricket',
                 points: '15',
                 endDate: '13/12/2020',
-                id:'cricket'
+                id:'cricket',
+                status: 'not completed'
             },
             {
                 title: 'Photography',
                 description: 'Give your speech on photography. Free to choose any topic and any country with respect to cricket',
                 points: '25',
                 endDate: '15/12/2020',
-                id:'photography'
+                id:'photography',
+                status: 'not completed'
             },
             {
                 title: 'Traffic in Bangalore',
                 description: 'Views on the traffic in bangalore and suggest how effectively we can get rid from this',
                 points: '20',
                 endDate: '15/12/2020',
-                id:'traffic'
+                id:'traffic',
+                status: 'not completed'
             },
             {
                 title: 'World war 3',
                 description: 'Your view on the world war 3 possibilities and summarize who is the main reason for this.',
                 points: '30',
                 endDate: '19/12/2020',
-                id:'worldwar3'
+                id:'worldwar3',
+                status: 'not completed'
             },
             {
                 title: 'Cine industry',
                 description: 'Any lattest news about the kollywoodm tollywood or any other cine industry',
                 points: '35',
                 endDate: '22/12/2020',
-                id:'cine'
+                id:'cine',
+                status: 'not completed'
             }
         ]
     }    
@@ -209,3 +252,75 @@ export const ContributorList: Contributors[] = [{
         points: '10'
     }
 ]
+
+export const ProfileDetails = {
+    activeChallenge: [{
+        streamId:'coding_challenge',
+        streamTitle: 'Coding Challenge',
+        streamAvatar: '../../../assets/images/coding_mac8.jpg',
+        challengeId:'factorial',
+        challengeTitle: 'Factorial Numbers',
+        points:'35'
+    },
+    {
+        streamId:'orating',
+        streamTitle: 'Orating',
+        streamAvatar: '../../../assets/images/stream_image_logo4.jpg',
+        challengeId:'politics',
+        challengeTitle: 'Politics',
+        points:'10'
+    },{
+        streamId:'extra_curricular',
+        streamTitle: 'Extra Curricular',
+        streamAvatar: '../../../assets/images/stream_image_logo3.jpg',
+        challengeId: 'cooking',
+        challengeTitle: 'Cooking',
+        points: '10'
+    }],
+    completedChallenge: [{
+        streamId:'orating',
+        streamTitle: 'Orating',
+        streamAvatar: '../../../assets/images/stream_image_logo4.jpg',
+        challengeId:'cricket',
+        challengeTitle: 'Cricket',
+        points:'35'
+    },
+    {
+        streamId:'coding_challenge',
+        streamTitle: 'Coding Challenge',
+        streamAvatar: '../../../assets/images/coding_mac8.jpg',
+        challengeId:'palindrome',
+        challengeTitle: 'Palindrome Code',
+        points:'10'
+    },{
+        streamId:'coding_challenge',
+        streamTitle: 'Coding Challenge',
+        streamAvatar: '../../../assets/images/coding_mac8.jpg',
+        challengeId: 'prime_numbers',
+        challengeTitle: 'Prime Numbers',
+        points: '10'
+    }],
+    favouriteChallenge: [{
+        streamId:'coding_challenge',
+        streamTitle: 'Coding Challenge',
+        streamAvatar: '../../../assets/images/coding_mac8.jpg',
+        challengeId:'factorial',
+        challengeTitle: 'Factorial Numbers',
+        points:'35'
+    },
+    {
+        streamId:'orating',
+        streamTitle: 'Orating',
+        streamAvatar: '../../../assets/images/stream_image_logo4.jpg',
+        challengeId:'politics',
+        challengeTitle: 'Politics',
+        points:'10'
+    },{
+        streamId:'extra_curricular',
+        streamTitle: 'Extra Curricular',
+        streamAvatar: '../../../assets/images/stream_image_logo3.jpg',
+        challengeId: 'cooking',
+        challengeTitle: 'Cooking',
+        points: '10'
+    }]
+}

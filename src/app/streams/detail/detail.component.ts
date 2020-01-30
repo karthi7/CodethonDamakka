@@ -15,10 +15,16 @@ export class DetailComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
   streamId: string;
   currentStream: StreamModel;
+  tabDetails = [{title:'Problem', isSelected:true},{title:'Submissions', isSelected:false},{title:'Leaderboard', isSelected:false},{title:'Disclosure', isSelected:false},{title:'Editorial', isSelected:false}]
 
   ngOnInit() {
     this.streamId = this.route.snapshot.params['streamId'];
     this.currentStream = this.getCurrentStream(this.streamId);
+  }
+
+  onTabSelect(index) {
+    this.tabDetails.map(item => item.isSelected=false);
+    this.tabDetails[index].isSelected = true;
   }
 
   getCurrentStream(streamId): StreamModel {

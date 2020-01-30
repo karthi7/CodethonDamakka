@@ -10,4 +10,10 @@
     align-items: center;
     color: #31908c;
     margin-top: 25px;
+    font-size: 1.35rem;
+}
+
+::ng-deep .dark_mode .stream__tile {
+    background: $theme_dark_tertiary !important;
+    color: white !important;
 }

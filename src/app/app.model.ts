@@ -15,6 +15,7 @@ export interface ChallengeModel {
     points: string;
     endDate: string;
     id:string;
+    status:string;
 }
 
 export interface Contributors {

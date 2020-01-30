@@ -33,7 +33,7 @@
     }
     .lengthy__tile-header{
         margin-bottom: .5rem;
-        font-size: 18px;
+        font-size: 21px;
     }
     .lengthy__tile-info{
         margin: 4px;
@@ -62,4 +62,17 @@
 
 .green {
     color: green;
+}
+
+::ng-deep .dark_mode .lengthy__tile-header {
+    color: white !important;
+}
+
+::ng-deep .dark_mode .lengthy__tile {
+    background: $theme_dark_secondary;
+    color: white;
+}
+
+::ng-deep .dark_mode  .lengthy__tile :hover {
+    background: #424242 !important;
 }
